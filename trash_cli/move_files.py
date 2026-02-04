@@ -12,8 +12,9 @@ def move_file_to_trash(file):
     new_file_name, new_file_path, time_stamp = generate_unique_filename(file)
 
     # renaming file to bear time_stamp
-    time_stamped_file_path = os.path.dirname(file)+ "/" + new_file_name
-    os.rename(new_file_path, time_stamped_file_path)
+    file_parent = new_file_path.parent
+    time_stamped_file_path = file_parent / new_file_name
+    new_file_path.rename(time_stamped_file_path)
 
     # moving file to be deleted to trash folder
     shutil.move(time_stamped_file_path, files_path)
