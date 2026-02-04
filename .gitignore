@@ -1,0 +1,7 @@
+k.txt
+k.txt.pub
+*.pub
+.venv
+__pycache__/
+*.pyc
+.idea/
