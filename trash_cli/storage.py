@@ -10,9 +10,5 @@ def generate_unique_filename(file):
 
     return new_file_name, file_path, time_stamp
 
-def generate_info_file(new_filename):
-    info_file_name = Path(new_filename).stem + ".trashinfo"
-
-    return info_file_name
 
 generate_unique_filename("/Users/sascha/PycharmProjects/LearningPython/03_Python_Basics/trash_cli/sample_file_1.txt")
